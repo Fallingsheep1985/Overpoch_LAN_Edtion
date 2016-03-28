@@ -20,13 +20,13 @@ if(isServer) then {
 
 	//Troops
 	[[_position select 0,_position select 1,0],3,"Medium",["Random","AT"],4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],3,"Medium","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],3,"Medium","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+//	[[_position select 0,_position select 1,0],3,"Medium","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+//	[[_position select 0,_position select 1,0],3,"Medium","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
 
 	//Static Guns
 	[[
 		[(_position select 0) + 25, (_position select 1) + 25, 0],
-		[(_position select 0) - 25, (_position select 1) - 25, 0]
+	//	[(_position select 0) - 25, (_position select 1) - 25, 0]
 	],"M2StaticMG","Easy","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
 
 	//Condition

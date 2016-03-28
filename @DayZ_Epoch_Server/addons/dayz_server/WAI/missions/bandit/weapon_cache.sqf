@@ -15,7 +15,7 @@ if(isServer) then {
 	_crate 			= createVehicle [_crate_type,[(_position select 0),(_position select 1),0], [], 0, "CAN_COLLIDE"];
 	
 	//Troops
-	_rndnum 	= (1 + round(random 7));
+	_rndnum 	= (1 + round(random 2));
 	_rndgro 	= (1 + round(random 2));
 	[[_position select 0,_position select 1,0],_rndnum,"Easy",["Random","AT"],3,"Random","Hero","Random","Hero",_mission] call spawn_group;
 	for "_i" from 0 to _rndgro do {

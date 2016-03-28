@@ -23,7 +23,7 @@ if(isServer) then {
 
 	//Troops
 	[[_position select 0,_position select 1,0],4,"Easy",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Easy","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	//[[_position select 0,_position select 1,0],4,"Easy","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 
 	//Condition
 	_complete = [

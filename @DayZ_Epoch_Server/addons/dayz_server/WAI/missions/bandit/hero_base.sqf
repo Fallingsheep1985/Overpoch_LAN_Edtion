@@ -31,12 +31,12 @@ if(isServer) then {
 	{ _x setVectorUp surfaceNormal position _x; } count _baserunover;
 	
 	//Group Spawning
-	_num = 4 + round (random 3);
+	_num = 2 + round (random 3);
 	[[_position select 0,_position select 1,0],_num,"Hard",["Random","AT"],4,"Random","Hero","Random","Hero",_mission] call spawn_group;
 	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	//[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	//[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	//[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
 
 	//Humvee Patrol
 	[[(_position select 0) + 100, _position select 1, 0],[(_position select 0) + 100, _position select 1, 0],50,2,"HMMWV_Armored","Hard","Hero","Hero",_mission] call vehicle_patrol;
@@ -44,8 +44,8 @@ if(isServer) then {
 	//Static Guns
 	[[[(_position select 0) - 10, (_position select 1) + 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
 	[[[(_position select 0) + 10, (_position select 1) - 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
-	[[[(_position select 0) + 10, (_position select 1) + 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
-	[[[(_position select 0) - 10, (_position select 1) - 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
+	//[[[(_position select 0) + 10, (_position select 1) + 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
+	//[[[(_position select 0) - 10, (_position select 1) - 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;
 
 	//Heli Paradrop
 	[[(_position select 0), (_position select 1), 0],[0,0,0],400,"UH1H_DZ",10,"Hard","Random",4,"Random","Hero","Random","Hero",true,_mission] spawn heli_para;

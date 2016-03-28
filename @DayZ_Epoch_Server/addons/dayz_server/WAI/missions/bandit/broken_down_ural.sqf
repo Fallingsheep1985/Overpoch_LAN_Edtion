@@ -24,9 +24,9 @@ if(isServer) then {
 
 	[[_position select 0,_position select 1,0],_rndnum,"Easy",["Random","AT"],4,"Random","Hero","Random","Hero",_mission] call spawn_group;
 
-	for "_i" from 0 to _rndgro do {
-		[[_position select 0,_position select 1,0],_rndnum,"Easy","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	};
+	//for "_i" from 0 to _rndgro do {
+//		[[_position select 0,_position select 1,0],_rndnum,"Easy","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+//	};
 	
 	//Condition
 	_complete = [
