@@ -5,7 +5,7 @@
 
 //Recruit Survivors
 DBGroupsStarted = false;
-DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+DBMaxSurvivors = 40; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -39,6 +39,8 @@ dayz_maxLocalZombies = 10; // Default = 30
 
 dayz_fullMoonNights = true;
 
+MaxMineVeins = 500; 
+
 dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 dayz_poleSafeArea = 50; //zombie free plot poles
@@ -49,9 +51,9 @@ dayz_sellDistance_vehicle = 10;
 dayz_sellDistance_boat = 30;
 dayz_sellDistance_air = 40;
 
-dayz_maxAnimals = 5; // Default: 8
+dayz_maxAnimals = 25; // Default: 8
 dayz_tameDogs = true;
-DynamicVehicleDamageLow = 0; // Default: 0
+DynamicVehicleDamageLow = 20; // Default: 0
 DynamicVehicleDamageHigh = 100; // Default: 100
 
 DZE_BuildOnRoads = true; // Default: False
@@ -66,18 +68,18 @@ DZE_DeathMsgTitleText = true;
 DZE_DeathMsgSide = true;
 DZE_BackpackGuard = false; //Default = true, true to enable, false to disable - wipes backpack on combat/ALT+F4 logging
 DZE_ForceNameTagsOff = false;
-DZE_R3F_WEIGHT = true; //use weight system
+DZE_R3F_WEIGHT = false; //use weight system
 DZE_PlotPole = [100,115];	
-DZE_BuildingLimit = 400;//how many items can a player build
+DZE_BuildingLimit = 1000;//how many items can a player build
 DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
 DZE_LootSpawnTimer = 10;// in minutes
 DZE_MissionLootTable = true; //Custom Loot Tables
 DZE_ConfigTrader = true;//Config based traders
 DZE_selfTransfuse = true; //Self blood bag
 DZE_selfTransfuse_Values = [
-6000, //Blood amount
- 10,  // Chance of Infection
-300 //Cooldown Timer
+8000, //Blood amount
+ 5,  // Chance of Infection
+150 //Cooldown Timer
 ];
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
@@ -92,8 +94,8 @@ DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked
 ns_blowout = true;
 ns_blowout_dayz = true;
 ns_blow_delaymod = 0.74; //blowout delay
-ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
-ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
+ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement 
+ns_blow_playerdamage = random 2000; // damage players without ns_blow_itemapsi can get per blowout
 ns_blow_emp = false;
 
 //Elevator
@@ -163,8 +165,11 @@ if (!isDedicated) then {
 	
 	//Run the player monitor
 	if (IntroMusicScript) then {
-		 _id = player addEventHandler ["Respawn", {_id = [] spawn player_death; 
-		 [] execVM "scripts\intromusic\intromusic.sqf";}
+		 _id = player addEventHandler ["Respawn", {
+			 _id = [] spawn player_death; 
+			 [] execVM "scripts\intromusic\intromusic.sqf";
+			 _nul = [] execVM "addin\plrInit.sqf";
+			 }
 		 ];
 	}else{
 		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
@@ -361,6 +366,19 @@ if(AdmintoolsScript)then{
 if(noVoicesidescript)then{
     call compile preprocessFileLineNumbers "scripts\noVoice.sqf";                              
 };
+if(Miningscript)then{
+	[] execVM 'scripts\mining\init.sqf';
+ };
+ if(deadbodyscript)then{
+	[] execVM 'scripts\deadbodymarkers.sqf';
+ };
+ if(dogscript)then{ 
+	 if (isServer) then {
+		dogOwner = [];
+	 };
+	 //vehicle climb
+_nul = [] execVM "addin\vehInit.sqf";
+ };
 //Admin skin
 {
 	_adminated = _x getVariable ["adminated",0];

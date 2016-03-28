@@ -24,7 +24,7 @@ server_name = "0.16 NAPF"; //Watermark Text
 //Slow zombies
 walkerZombieScript = true;
 //Gambling ( Slotmachine, Guessing Game)
-GambleingScript = false; // NO NAPF CASINO YET
+GambleingScript = true; // NO NAPF CASINO YET
 //No Voice Inside chat
 noVoicesidescript = true;
 //Intro Music
@@ -133,7 +133,12 @@ GroundFogScript = true;
 JAEMScript = true;
 //Advanced Alchemy Building
 AdvancedAlchemyScript = true;
-
+//Mining Script
+Miningscript = true;
+//Deadbody markers
+deadbodyscript = true;
+//Dogs
+dogscript = true;
 
 //CUSTOM BUILDINGS
 
