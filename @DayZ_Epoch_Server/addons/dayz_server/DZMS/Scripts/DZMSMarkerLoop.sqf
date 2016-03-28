@@ -8,6 +8,7 @@ diag_log text format ["[DZMS]: Mission Marker Loop for JIPs Starting!"];
 
 //Lets define these
 if (isNil "DZMSMajCoords")then{DZMSMajCoords = [0,0,0];};
+if (isNil "DZMSMajCoords2")then{DZMSMajCoords2 = [0,0,0];};
 if (isNil "DZMSMinCoords")then{DZMSMinCoords = [0,0,0];};
 
 //Lets start the timer
@@ -29,6 +30,20 @@ while {_run} do
 		"DZMSMajDot" setMarkerColor "ColorBlack";
 		"DZMSMajDot" setMarkerType "Vehicle";
 		"DZMSMajDot" setMarkerText DZMSMajName;
+	};
+		if (!(getMarkerColor "DZMSMajMarker2" == "")) then {
+		deleteMarker "DZMSMajMarker2";
+		deleteMarker "DZMSMajDot2";
+		//Re-Add the markers
+		_nul = createMarker ["DZMSMajMarker", DZMSMajCoords2];
+		"DZMSMajMarker2" setMarkerColor "ColorRed";
+		"DZMSMajMarker2" setMarkerShape "ELLIPSE";
+		"DZMSMajMarker2" setMarkerBrush "Grid";
+		"DZMSMajMarker2" setMarkerSize [175,175];
+		_zap = createMarker ["DZMSMajDot2", DZMSMajCoords2];
+		"DZMSMajDot2" setMarkerColor "ColorBlack";
+		"DZMSMajDot2" setMarkerType "Vehicle";
+		"DZMSMajDot2" setMarkerText DZMSMajName2;
 	};
 	//Lets do the same for the minor mission
 	if (!(getMarkerColor "DZMSMinMarker" == "")) then {

@@ -8,7 +8,8 @@ private ["_unit","_player","_humanity","_banditkills","_skin","_bp","_okSkin","_
 _unit = _this select 0;
 _player = _this select 1;
 
-_CASH = ((random 10) * 10000);
+_CASHRAN = (((random 10)*(random 10)) * ((random 10)*(random 10)));
+_CASH = round _CASHRAN;
 _unit setVariable ["cashMoney",_CASH, true];
 
 //Script addition to add skin to units gear

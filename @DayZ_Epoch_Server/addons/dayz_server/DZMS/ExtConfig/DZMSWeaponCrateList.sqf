@@ -22,4 +22,4 @@ DZMSConSupply = ["CinderBlocks","MortarBucket","ItemTankTrap","ItemPole","PartGe
 //Epoch Briefcases 
 DZMSBreifcase = ["ItemBriefcase100oz","ItemBriefcase90oz","ItemBriefcase80oz","ItemBriefcase70oz","ItemBriefcase60oz","ItemBriefcase50oz","ItemBriefcase40oz","ItemBriefcase30oz","ItemBriefcase20oz","ItemBriefcase10oz","ItemBriefcaseEmpty"];
 //NUTS
-DZMSNutSupply = ["FoodNutmix","FoodPistachio"];
+DZMSNutSupply = ["FoodNutmix","FoodPistachio","CinderBlocks","MortarBucket",];

@@ -5,10 +5,12 @@
 
 diag_log text "[DZMS]: Loading ExecVM Functions.";
 DZMSMajTimer = "\z\addons\dayz_server\DZMS\Scripts\DZMSMajTimer.sqf";
+DZMSMajTimer2 = "\z\addons\dayz_server\DZMS\Scripts\DZMSMajTimer2.sqf";
 DZMSMinTimer = "\z\addons\dayz_server\DZMS\Scripts\DZMSMinTimer.sqf";
 DZMSMarkerLoop = "\z\addons\dayz_server\DZMS\Scripts\DZMSMarkerLoop.sqf";
 
 DZMSAddMajMarker = "\z\addons\dayz_server\DZMS\Scripts\DZMSAddMajMarker.sqf";
+DZMSAddMajMarker2 = "\z\addons\dayz_server\DZMS\Scripts\DZMSAddMajMarker2.sqf";
 DZMSAddMinMarker = "\z\addons\dayz_server\DZMS\Scripts\DZMSAddMinMarker.sqf";
 
 DZMSAIKilled = "\z\addons\dayz_server\DZMS\Scripts\DZMSAIKilled.sqf";

@@ -8,11 +8,11 @@
 DZMSHotSpotsMissHumanity = true;
 
 // How Much Humanity?
-DZMSHotSpotsCntHumanity = 10;
+DZMSHotSpotsCntHumanity = 25;
 
 // Do You Want AI to use NVGs?
 //(They are deleted on death)
-DZMSHotSpotsUseNVG = true;
+DZMSHotSpotsUseNVG = false;
 
 // Do you want AI to use RPG7V's?
 //(Only one unit per group spawn will have one)
@@ -567,7 +567,7 @@ DZMSRoadBlocksStatLocs = DZMSRoadBlocksCherno;
 // DZMSRoadBlocksStatLocs = DZMSRoadBlocksMiroslavl;
 
 // how many hotspots per mission
-DZMSHotSpotsNumber = 5;
+DZMSHotSpotsNumber = 10;
 
 // show all hotspots on map? (for debug purposes, only)
 DZMSHotSpotsMapDebug = false;
@@ -589,13 +589,144 @@ DZMSHotSpotsSaveVehicles = false;
 // Adjust to your liking.
 
 //Armed Choppers (Huey)
-DZMSHotSpotsChoppers = ["UH1H_DZ","Mi17_DZ"];
+DZMSHotSpotsChoppers = [
+"UH1H_DZ",
+"Mi17_DZ""a10",
+"AH1Z",
+"AH64D",
+"AH64D_EP1",
+"AH64D_Sidewinders",
+"AH6J_EP1",
+"AH6X_DZ",
+"AH6X_EP1",
+"AW159_Lynx_BAF",
+"BAF_Apache_AH1_D",
+"baf_merlin_dze",
+"BAF_Merlin_HC3_D",
+"c130j",
+"c130j_us_ep1",
+"c130j_us_ep1_dz",
+"CH_47F_BAF",
+"CH_47F_EP1",
+"CH_47F_EP1_DZ",
+"CH_47F_EP1_DZE",
+"ch53_dze",
+"Ka137_MG_PMC",
+"Ka137_PMC",
+"Ka52",
+"Ka52Black",
+"Ka60_GL_PMC",
+"Ka60_PMC",
+"l39_tk_ep1",
+"m6_ep1",
+"MH60S",
+"MH6J_DZ",
+"MH6J_EP1",
+"Mi17_CDF",
+"Mi17_Civilian",
+"Mi17_Civilian_DZ",
+"Mi17_DZ",
+"mi17_dze",
+"Mi17_Ins",
+"Mi17_medevac_CDF",
+"Mi17_medevac_INS",
+"Mi17_medevac_RU",
+"Mi17_rockets_RU",
+"Mi17_TK_EP1",
+"Mi17_UN_CDF_EP1",
+"Mi171Sh_CZ_EP1",
+"Mi171Sh_rockets_CZ_EP1",
+"Mi24_D",
+"Mi24_D_TK_EP1",
+"Mi24_P",
+"Mi24_V",
+"mq9predatorb_us_ep1",
+"MV22",
+"MV22_DZ",
+"UH1H_DZ",
+"UH1H_DZE",
+"UH1H_TK_EP1",
+"UH1H_TK_GUE_EP1",
+"uh1y",
+"UH1Y_DZ",
+"UH1Y_DZE",
+"UH60M_EP1",
+"UH60M_EP1_DZ",
+"uh60m_ep1_dze",
+"UH60M_EP1_DZE",
+"UH60M_MEV_EP1"];
 
 //Small Vehicles (Humvees)
-DZMSHotSpotsSmallVic = ["hilux1_civil_3_open_EP1","SUV_TK_CIV_EP1","HMMWV_DZ","UAZ_Unarmed_UN_EP1"];
+DZMSHotSpotsSmallVic = [
+"hilux1_civil_3_open_EP1",
+"SUV_TK_CIV_EP1","Ural_INS",
+"HMMWV_DZ",
+"SUV_Armored_DZ",
+"suv_blue",
+"suv_camo",
+"suv_charcoal",
+"SUV_DZ",
+"suv_green",
+"suv_orange",
+"suv_pink",
+"SUV_PMC",
+"SUV_PMC_BAF",
+"suv_red",
+"suv_silver",
+"SUV_TK_CIV_EP1",
+"SUV_TK_EP1",
+"SUV_UN_EP1",
+"suv_white",
+"suv_yellow",
+"UAZ_Unarmed_UN_EP1"
+];
 
 //Large Vehicles (Urals)
-DZMSHotSpotsLargeVic = ["Ural_TK_CIV_EP1","Ural_INS"];
+DZMSHotSpotsLargeVic = [
+"Ural_TK_CIV_EP1",
+"Ural_CDF",
+"Ural_CDF_DZ",
+"Ural_INS",
+"Ural_TK_CIV_EP1",
+"Ural_UN_EP1",
+"ural_zu23_cdf",
+"ural_zu23_gue",
+"ural_zu23_ins",
+"ural_zu23_tk_ep1",
+"ural_zu23_tk_gue_ep1",
+"UralCivil",
+"UralCivil_DZE",
+"UralCivil2",
+"UralCivil2_DZE",
+"UralOpen_CDF",
+"UralOpen_INS",
+"uralreammo_cdf",
+"uralreammo_ins",
+"uralreammo_tk_ep1",
+"UralRefuel_CDF",
+"UralRefuel_INS",
+"UralRefuel_TK_EP1",
+"uralrefuel_tk_ep1_dz",
+"uralrepair_cdf",
+"uralrepair_ins",
+"uralrepair_tk_ep1",
+"uralsalvage_tk_ep1",
+"uralsupply_tk_ep1",
+"V3S_Civ",
+"v3s_gue",
+"V3S_Open_TK_CIV_EP1",
+"V3S_Open_TK_EP1",
+"V3S_RA_TK_GUE_EP1_DZE",
+"v3s_reammo_tk_gue_ep1",
+"V3S_Refuel_TK_GUE_EP1",
+"v3s_refuel_tk_gue_ep1_dz",
+"v3s_repair_tk_gue_ep1",
+"v3s_salvage_tk_gue_ep1",
+"v3s_supply_tk_gue_ep1",
+"V3S_TK_EP1",
+"V3S_TK_EP1_DZE",
+"V3S_TK_GUE_EP1"
+];
 
 //Armed Vehicles for minor roadblock missions
 DZMSHotSpotsArmedVic = ["HMMWV_Armored","LandRover_MG_TK_EP1","UAZ_MG_TK_EP1"];

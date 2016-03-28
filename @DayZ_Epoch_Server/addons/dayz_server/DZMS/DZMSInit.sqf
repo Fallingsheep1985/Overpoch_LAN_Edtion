@@ -101,10 +101,12 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZMS\DZMSFunctions
 // these arrays are used to hold units for each mission type
 DZMSUnitsMinor = [];
 DZMSUnitsMajor = [];
-
+DZMSUnitsMajor2 = [];
 // Let's get the clocks running!
 [] ExecVM DZMSMajTimer;
+[] ExecVM DZMSMajTimer2;
 [] ExecVM DZMSMinTimer;
+DZMSMajDone2 = false;
 DZMSMajDone = false;
 DZMSMinDone = false;
 
