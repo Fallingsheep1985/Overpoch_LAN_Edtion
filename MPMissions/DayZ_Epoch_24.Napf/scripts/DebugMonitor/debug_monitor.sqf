@@ -8,19 +8,20 @@ fnc_debug = {
 	
 		//Title
 		_currentHUM = (player getVariable["humanity",0]);
-		if (_currentHUM > 10000) then {
+		_title = "Survivor";
+		if (_currentHUM > 30000) then {
 			_title = "Godly Hero";
 		};
-		if (( _currentHUM < 9999 ) && (_currentHUM > 9000)) then {
+		if (( _currentHUM < 29999 ) && (_currentHUM > 20000)) then {
 			_title = "Epic Hero";
 		};
-		if (( _currentHUM < 8999 ) && (_currentHUM > 8000)) then {
+		if (( _currentHUM < 19999 ) && (_currentHUM > 10000)) then {
 			_title = "Legendary Hero";
 		};
-		if (( _currentHUM < 7999 ) && (_currentHUM > 7000)) then {
+		if (( _currentHUM < 9999 ) && (_currentHUM > 8000)) then {
 			_title = "Military Hero";
 		};
-		if (( _currentHUM < 6999 ) && (_currentHUM > 6000)) then {
+		if (( _currentHUM < 7999 ) && (_currentHUM > 6000)) then {
 			_title = "Wasteland Hero";
 		};
 		if (( _currentHUM < 5999 ) && (_currentHUM > 5000)) then {
@@ -35,7 +36,7 @@ fnc_debug = {
 		if (( _currentHUM < 2999 ) && (_currentHUM > 2500)) then {
 			_title = "GoodGuy";
 		};
-		if (( _currentHUM < 2499 ) && (_currentHUM > 0 ) then {
+		if (( _currentHUM < 2499 ) && (_currentHUM > 0 )) then {
 			_title = "Survivor";
 		};
 		if (( (_currentHUM > -1) ) && (_currentHUM < -2499)) then {
@@ -56,13 +57,13 @@ fnc_debug = {
 		if (( (_currentHUM > -6000) ) && (_currentHUM < -6999)) then {
 			_title = "Hardened Bandit";
 		};
-		if (( (_currentHUM > -7000) ) && (_currentHUM < -7999)) then {
+		if (( (_currentHUM > -10000) ) && (_currentHUM < -9999)) then {
 			_title = "Legendary Bandit";
 		};
-		if (( (_currentHUM > -8000) ) && (_currentHUM < -8999)) then {
+		if (( (_currentHUM > -20000) ) && (_currentHUM < -19999)) then {
 			_title = "Epic Bandit";
 		};
-		if (( (_currentHUM > -9000) ) && (_currentHUM < -9999)) then {
+		if (( (_currentHUM > -30000) ) && (_currentHUM < -29999)) then {
 			_title = "Godly Bandit";
 		};	
 				
@@ -79,7 +80,7 @@ fnc_debug = {
 			<t size='1' font='Bitstream' align='center' color='#5882FA'>Survived %11 Days</t><br/>
 			<t size='1' font='Bitstream' align='Center' >%1</t><br/>
 			<br/>
-			<t size='1' font='Bitstream' align='left' color='#CC0000'>Blood: </t><t size='1' font='Bitstream' align='right'>%14</t><br/>
+			<t size='1' font='Bitstream' align='left' color='#CC0000'>Title: </t><t size='1' font='Bitstream' align='right'>%14</t><br/>
 			<br/>
 			<img size='4.75' image='%2'/><br/>
 			<t size='1' font='Bitstream' align='left' color='#CC0000'>Blood: </t><t size='1' font='Bitstream' align='right'>%10</t><br/>
